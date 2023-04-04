@@ -1,0 +1,98 @@
+The `2-matrix_divided` Module. Using the function `matrix_divided` from the module above
+========================================================================================
+
+Usage:
+======
+
+Importing ``matrix_divided`` function from the module
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Begin Tests.
+
+::
+
+Test for strings in the list:
+
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+Test for size of lists in 2D list:
+
+    
+    TypeError: Each row of the matrix must have the same size
+
+::
+
+Test for type of divisor passed in:
+
+  
+    TypeError: div must be a number
+
+::
+
+Test if divisor is 0:
+
+    ZeroDivisionError: division by zero
+
+::
+
+Test if code runs well:
+
+ 
+::
+
+Test for empty 2D list:
+
+::
+
+Test for content of list:
+
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+checking for module docstring
+
+
+checking function docstring for module
+::
+        
+
+checking regular functionality for ``matrix_divided``
+::
+       
+
+checking if matrix is a list of lists
+::
+   
+checking if rows has the same size
+::
+       
+
+checking if divisor is zero
+::
+       
+
+checking when None is passed
+::
+       
+
+checking when boolean is passed
+::
+        
+
+checking other data structures such as tuples, sets and dicts
+::
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+checking when less the two arguments is passed
+::
+         
+
+::
+
+END.
+===
