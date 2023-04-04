@@ -1,0 +1,52 @@
+
+Test for the 101-lazy_lazy_matrix_mul module
+--------------------------------------------
+
+This test is for computation of matrices(multiplication).
+The multiplication of the matrices must be possible if not an
+error is raised.
+
+Importing the 100-matrices_mul module
+-------------------------------------
+    
+checking for module docstring
+::
+  
+checking function docstring for module
+::
+      
+Tests when wrong Type is passed
+::
+
+	TypeError: Object arrays are not currently supported
+	
+	ValueError: Scalar operands are not allowed, use '*' instead
+	
+	ValueError: setting an array element with a sequence
+	
+	ValueError: shapes (3,2) and (3,) not aligned: 2 (dim 1) != 3 (dim 0)
+
+	TypeError: Object arrays are not currently supported
+	>>> lazy_matrix_mul([[1.3, 2, 4], [2.5, 3]], [[1, 2], [4, 5]])
+	Traceback (most recent call last):
+	...
+	ValueError: setting an array element with a sequence.
+
+	ValueError: setting an array element with a sequence.
+
+
+Tests when wrong values are passed as arguement
+::
+
+Tests for use of normal functionality of matrices
+::
+	
+	
+Checking for one too few args:
+
+	TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+Checking for too many args:
+	
+	 ...
+	 TypeError: lazy_matrix_mul() takes 2 positional arguments but 3 were given
