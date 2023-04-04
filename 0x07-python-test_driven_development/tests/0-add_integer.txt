@@ -1,5 +1,5 @@
 ==========================================
-Tests for the 0-add_integer module
+Tests for 0-add_integer module
 ==========================================
 
 This module has only one function which is the ``add_integer()``
@@ -120,8 +120,6 @@ Test for negative number:
 
     >>> add_integer(-20, 30)
     10
-
-
 
 Test if a is empty:
 
