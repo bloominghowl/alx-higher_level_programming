@@ -1,0 +1,72 @@
+The `3-say_my_name` Module
+============================
+
+Using the `say_my_name` function
+==================================
+
+Usage:
+=====
+
+::
+
+Importing the ``say_my_name`` function.
+
+   
+
+Begin tests.
+
+::
+
+Test if first name is a string:
+
+   
+::
+
+Test if last name is a string:
+
+   
+::
+
+Test if function displays the strings well in the message:
+
+   
+
+::
+
+checking for module docstring
+::
+        
+
+checking function docstring for module
+::
+      
+
+checking regular functionality when firstname and lastname are passed
+::
+      
+
+checking when only firstname is passed
+::
+      
+
+checking when only lastname is passed
+::
+       
+checking when no argument is provided
+::
+        
+
+checking when wrong type is provided for first_name
+::
+       
+
+checking when wrong type is provided for last_name
+::
+      
+
+checking when None is passed
+::
+
+::
+END.
+===
