@@ -7,7 +7,7 @@ Contains definition of class MyInt
 class MyInt(int):
     """Definition of class MyInt that inherits from class int"""
 
-    def __eq__(self, other):
+    def __equal__(self, other):
         """Overrides equals, inverting it"""
         return int(self) != int(other)
 
