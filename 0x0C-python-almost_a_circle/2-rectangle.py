@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" 2-main """
+""" 2-rectangle """
 from models.rectangle import Rectangle
 
-if __name__ == "__main__":
+if __name__ == "__rectangle__":
 
         try:
             Rectangle(10, "2")
