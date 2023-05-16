@@ -1,3 +1,3 @@
---ists all the tables of a database in  MySQL server.
-USE your_database_name;
+--lists all the tables of a database in  MySQL server.
+
 SHOW TABLES;
