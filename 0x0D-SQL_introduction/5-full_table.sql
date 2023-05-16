@@ -1,7 +1,5 @@
--- Specify the database name
+-- A script that prints the full description of the table first_table from the database hbtn_0c_0 in your MySQL server.
+-- The database name will be passed as an argument of the mysql command
+-- You are not allowed to use the DESCRIBE or EXPLAIN statements
 
-USE hbtn_0c_0; 
-SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, COLUMN_DEFAULT, EXTRA
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = 'hbtn_0c_0' -- Specify the database name
-  AND TABLE_NAME = 'first_table'; -- Specify the table name
+SHOW CREATE TABLE first_table;
