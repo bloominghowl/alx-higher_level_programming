@@ -1,8 +1,9 @@
 -- Use the hbtn_0d_usa database
-USE hbtn_0d_usa;
 
--- List all cities with their respective state names
+-- This script lists all cities contained in the database hbtn_0d_usa.
+
+-- Use of join to display specific data
 SELECT cities.id, cities.name, states.name
-FROM cities, states
-WHERE cities.state_id = states.id
-ORDER BY cities.id ASC;
+FROM cities
+JOIN states
+ON cities.state_id = states.id;
