@@ -1,8 +1,5 @@
--- Connect to the MySQL server
-USE mysql;
+-- A script that lists all privileges of the MySQL users
+-- user_0d_1 and user_0d_2 on your server (in localhost).
 
--- Query for user_0d_1
-SELECT * FROM user WHERE user = 'user_0d_1';
-
--- Query for user_0d_2
-SELECT * FROM user WHERE user = 'user_0d_2';
+SHOW GRANTS FOR 'user_0d_1'@'localhost';
+SHOW GRANTS FOR 'user_0d_2'@'localhost';
