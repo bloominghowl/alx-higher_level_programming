@@ -1,26 +1,23 @@
 #!/usr/bin/python3
-"""
-Sends a POST request to http://0.0.0.0:5000/search_user with a letter as a parameter,
-and displays the id and name if the response is properly JSON formatted and not empty.
-"""
+"""Takes in a letter and sends a POST request
+to a url with the letter as a parameter."""
 
-import requests
-import sys
+if __name__ == '__main__':
+    import sys
+    import requests
 
-if len(sys.argv) > 1:
-    q = sys.argv[1]
-else:
-    q = ""
-
-url = "http://0.0.0.0:5000/search_user"
-data = {"q": q}
-response = requests.post(url, data=data)
-
-try:
-    json_data = response.json()
-    if json_data:
-        print("[{}] {}".format(json_data.get("id"), json_data.get("name")))
+    if len(sys.argv) > 1:
+        q_data = sys.argv[1]
     else:
-        print("No result")
-except ValueError:
-    print("Not a valid JSON")
+        q_data = ''
+    url = 'http://0.0.0.0:5000/search_user'
+    response = requests.post(url, data={'q': q_data})
+
+    try:
+        result = response.json()
+        if result:
+            print("[{}] {}".format(result.get('id'), result.get('name')))
+        else:
+            print("No result")
+    except Exception:
+        print("Not a valid JSON")
