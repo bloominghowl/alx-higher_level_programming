@@ -2,9 +2,11 @@
 """Sends a POST request to a given URL with an email as
 a parameter and displays the decoded body of the response."""
 
-import urllib.request
-import urllib.parse
-import sys
+
+if __name__ == "__main__":
+    import urllib.request
+    import urllib.parse
+    import sys
 
     url_ = sys.argv[1]
     email_ = {'email': sys.argv[2]}
