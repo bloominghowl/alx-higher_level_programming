@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-"""
-Sends a POST request to a given URL with an email as a parameter and displays the body of the response.
-"""
+"""Sends a POST request to a given URL with an email as
+a parameter and displays the body of the response."""
 
-import requests
+
 import sys
+import requests
 
-url = sys.argv[1]
-email = sys.argv[2]
-
-data = {'email': email}
-response = requests.post(url, data=data)
-
-print(response.text)
+response = requests.post(sys.argv[1], data={'email': sys.argv[2]})
+    print(response.text)
