@@ -5,14 +5,15 @@ and handles urllib.error.HTTPError exceptions.
 """
 
 import urllib.request
-import sys
 import urllib.error
+import sys
 
-url = sys.argv[1]
+url = urllib.request.Request(sys.argv[1])
 
 try:
     with urllib.request.urlopen(url) as response:
-        body = response.read().decode('utf-8')
-        print(body)
-except urllib.error.HTTPError as e:
-    print("Error code:", e.code)
+         url_res = response.read()
+         print(url_res.decode('utf-8'))
+
+except urllib.error.HTTPError as err:
+    print("Error code: {}",.format(err.code))
