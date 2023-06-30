@@ -1,17 +1,21 @@
 #!/usr/bin/python3
-"""Listing 10 commits in a repo"""
+"""Lists 10 commits (from the most recent to oldest) of a repository
+by a specific userusing the GitHub API."""
 
-if __name__ == '__main__':
-    import sys
-    import requests
+import requests
+import sys
 
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(
-        sys.argv[2], sys.argv[1])
-    try:
-        response = requests.get(url)
-        res_dict = response.json()
-        for i in range(0, 10):
-            print("{}: {}".format(res_dict[i].get('sha'), res_dict[i].get(
-                'commit').get('author').get('name')))
-    except Exception:
-        pass
+repository = sys.argv[1]
+owner = sys.argv[2]
+
+url = f"https://api.github.com/repos/{owner}/{repository}/commits"
+response = requests.get(url)
+
+if response.status_code == 200:
+    commits = response.json()[:10]
+    for commit in commits:
+        sha = commit.get("sha")
+        author_name = commit.get("commit").get("author").get("name")
+        print(f"{sha}: {author_name}")
+else:
+    print("Error accessing GitHub API. Status Code:", response.status_code)
