@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Take GitHub credentials (username and password) as arguments
-and uses the GitHub API to display users id"""
+"""Take GitHub credentials (username and password) as 
+arguments and uses the GitHub API to display users id"""
+
 
 if __name__ == '__main__':
     import sys
