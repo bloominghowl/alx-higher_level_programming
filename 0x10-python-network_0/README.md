@@ -24,25 +24,10 @@ The main objectives of this project are:
 - Use pycodestyle (version 2.8.*) to ensure code adherence to Python coding style guidelines.
 - Include a README.md file at the root of the project folder.
 
-## Getting Started
+## Additional Resources I used
 
-To get started with this project, follow these steps:
-
-1. Clone the repository to your local machine.
-2. Install any necessary dependencies or libraries.
-3. Run the Python scripts or execute the Bash scripts to explore different concepts.
-4. Refer to the comments and documentation within the code for detailed explanations.
-5. Modify or extend the code as needed for your specific requirements.
-
-## Additional Resources
-
-If you need further assistance or want to dive deeper into any of the covered topics, consider referring to the following resources:
+##If in need further assistance or want to dive deeper into any of the covered topics, consider referring to the following resources:
 
 - [Mozilla Developer Network (MDN) - HTTP Basics](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP)
 - [HTTP Status Codes](https://httpstatuses.com/)
 - [cURL Documentation](https://curl.se/docs/)
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
