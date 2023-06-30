@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
-Fetches the status of https://alx-intranet.hbtn.io and displays the response information.
-"""
+"""Fetches the status of https://alx-intranet.hbtn.io
+and displays the response information."""
+
 
 import urllib.request
 
