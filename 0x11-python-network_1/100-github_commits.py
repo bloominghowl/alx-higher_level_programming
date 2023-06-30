@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""Listing 10 commits in a repo"""
+"""Takes in Github repo nd owner name to list
+10 commits (from the most recent to oldest)"""
 
-if __name__ == '__main__':
-    import sys
+
+if __name__ == "__main__":
     import requests
+    import sys
 
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(
-        sys.argv[2], sys.argv[1])
-    try:
-        response = requests.get(url)
-        res_dict = response.json()
-        for i in range(0, 10):
-            print("{}: {}".format(res_dict[i].get('sha'), res_dict[i].get(
-                'commit').get('author').get('name')))
-    except Exception:
-        pass
+    r = requests.get('https://api.github.com/repos/{}/{}/commits'
+                     .format(sys.argv[2], sys.argv[1]))
+    if r.status_code >= 400:
+        print('None')
+    else:
+        for com in r.json()[:10]:
+            print("{}: {}".format(com.get('sha'),
+                                  com.get('commit').get('author').get('name')))
