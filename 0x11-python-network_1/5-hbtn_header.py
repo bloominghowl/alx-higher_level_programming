@@ -3,11 +3,11 @@
 Sends a request to a given URL and displays the value of the X-Request-Id variable in the response header.
 """
 
-import requests
-import sys
-
-url = sys.argv[1]
-response = requests.get(url)
-
-x_request_id = response.headers.get("X-Request-Id")
-print(x_request_id)
+if __name__ == '__main__':
+    import sys
+    import requests
+    try:
+        response = requests.get(sys.argv[1])
+        print(response.headers.get('X-Request-Id'))
+    except Exception:
+        pass
