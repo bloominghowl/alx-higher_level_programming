@@ -4,9 +4,7 @@ Fetches the status of https://alx-intranet.hbtn.io and displays the response inf
 """
 
 import urllib.request
-
 url = "https://alx-intranet.hbtn.io/status"
-
 with urllib.request.urlopen(url) as response:
     body = response.read()
 
